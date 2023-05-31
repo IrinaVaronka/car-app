@@ -11,9 +11,9 @@
                         <div class="card-body">
                             <input class="form-control" type="text" name="title" placeholder="Title" value={{old('title')}}>
                         </div>
-                        
+
                         <div class="card-body mt-3 col-6">
-                            <select class="form-select --cat--select" name="cat_id"">
+                            <select class="form-select" name="cat_id"">
                                 <option value=" 0">Car Category</option>
                                 @foreach($cats as $cat)
                                 <option value="{{$cat->id}}">{{$cat->title}}</option>
@@ -22,14 +22,10 @@
                             <div class="form-text">Please select car category here</div>
                         </div>
 
-                        <div class="card-body col-6">
-                            <select class="form-select --cat--select" name="cat_id"">
-                                <option value=" 0">Car Category</option>
-                                @foreach($cats as $cat)
-                                <option value="{{$cat->id}}">{{$cat->title}}</option>
-                                @endforeach
-                            </select>
-                            <div class="form-text">Please select car category here</div>
+                        <div class="card-body col-9">
+                            <label class="form-label">Driver name</label>
+                            <input type="text" class="form-control" name="driver" value={{old('driver')}}>
+                            <div class="form-text">Please add driver name</div>
                         </div>
 
                         <div class="form-button mt-2">
