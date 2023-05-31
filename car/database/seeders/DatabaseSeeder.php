@@ -4,6 +4,7 @@ namespace Database\Seeders;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Database\Seeder;
+use Faker\Factory as Faker;
 
 class DatabaseSeeder extends Seeder
 {
@@ -33,5 +34,20 @@ class DatabaseSeeder extends Seeder
                 'title' => $title,
             ]);
         }
+
+        $faker = Faker::create('en_US');
+
+        foreach(range(1, 6) as $_) {
+            $catId = rand(1, 3);
+            DB::table('cars')->insertGetId([
+                'title' => $faker->state,
+                'driver' => $faker->lastName($gender = 'male') ,
+                'cat_id' => $catId
+            ]);
+
+            
+        }
+
+    
     }
 }

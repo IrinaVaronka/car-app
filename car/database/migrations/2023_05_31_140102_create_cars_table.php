@@ -15,6 +15,8 @@ return new class extends Migration
             $table->id();
             $table->string('title', 100);
             $table->string('driver', 100)->nullable();
+            $table->unsignedBigInteger('cat_id');
+            $table->foreign('cat_id')->references('id')->on('cats');
             $table->timestamps();
         });
     }

@@ -14,8 +14,8 @@
                         <li class="list-group-item">
                             <div class="cat-line">
                                 <div class="card-body">
-                                    <h2>Car: {{$car->title}}</h2>
-                                     <h2>Driver`s name: {{$car->driver}}</h2>
+                                    <h3>Car: {{$car->title}}</h3>
+                                     <h4>Driver`s name: {{$car->driver}}</h4>
                                 </div>
                                 <div class="buttons">
                                     <a href="{{route('cars-edit', $car)}}" class="btn btn-outline-success">Edit</a>
