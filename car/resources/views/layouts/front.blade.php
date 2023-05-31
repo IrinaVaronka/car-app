@@ -15,7 +15,7 @@
     <link href="https://fonts.googleapis.com/css2?family=PT+Sans+Narrow:wght@700&family=Playfair:wght@300&family=Roboto:wght@300&family=Titillium+Web:wght@700&display=swap" rel="stylesheet">
 
     <!-- Scripts -->
-    @vite(['resources/back/sass/app.scss', 'resources/back/js/app.js'])
+    @vite(['resources/front/sass/app.scss', 'resources/front/js/app.js'])
 </head>
 <body>
     <div id="app">
@@ -32,35 +32,7 @@
                     <!-- Left Side Of Navbar -->
                     <ul class="navbar-nav me-auto">
                 
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                Categories
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('cats-index') }}">
-                                    Caterogies list
-                                </a>
-                                <a class="dropdown-item" href="{{ route('cats-create') }}">
-                                    New category
-                                </a>
-                            </div>
-                        </li>
-
-
-                        <li class="nav-item dropdown">
-                            <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                Cars
-                            </a>
-                            <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
-                                <a class="dropdown-item" href="{{ route('cars-index') }}">
-                                    Cars list
-                                </a>
-                                <a class="dropdown-item" href="{{ route('cars-create') }}">
-                                    New car
-                                </a>
-                            </div>
-                        </li>
-
+    
                     </ul>
 
                     <!-- Right Side Of Navbar -->
