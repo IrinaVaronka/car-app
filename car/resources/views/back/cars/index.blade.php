@@ -15,27 +15,28 @@
                             <div class="cat-line">
                                 <div class="card-body">
                                     <h3>Car: {{$car->title}}</h3>
-                                     <h4>Driver`s name: {{$car->driver}}</h4>
+                                    <h4>Driver`s name: {{$car->driver}}</h4>
                                 </div>
-                                <div class="buttons">
+                                @if(Auth::user()->role < 5) <div class="buttons">
                                     <a href="{{route('cars-edit', $car)}}" class="btn btn-outline-success">Edit</a>
                                     <form action="{{route('cars-delete', $car)}}" method="post">
                                         <button type="submit" class="btn btn-outline-danger">delete</button>
                                         @csrf
                                         @method('delete')
                                     </form>
-                                </div>
                             </div>
-                        </li>
-                        @empty
-                        <li class="list-group-item">
-                            <div class="cat-line">No cars yet</div>
-                        </li>
-                        @endforelse
-                    </ul>
+                            @endif
                 </div>
+                </li>
+                @empty
+                <li class="list-group-item">
+                    <div class="cat-line">No cars yet</div>
+                </li>
+                @endforelse
+                </ul>
             </div>
         </div>
     </div>
+</div>
 </div>
 @endsection

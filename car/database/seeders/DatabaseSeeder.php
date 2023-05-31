@@ -16,6 +16,7 @@ class DatabaseSeeder extends Seeder
         DB::table('users')->insert([
             'name' => 'kiwi',
             'email' => 'kiwi@gmail.com',
+            'role' => 1,
             'password' => Hash::make('123'),
         ]);
 
@@ -24,6 +25,7 @@ class DatabaseSeeder extends Seeder
             'email' => 'griki@gmail.com',
             'password' => Hash::make('123'),
         ]);
+
 
         foreach([
             'Comfort',

@@ -31,13 +31,13 @@ Route::prefix('cats')->name('cats-')->group(function () {
     });
 
 Route::prefix('cars')->name('cars-')->group(function () {
-    Route::get('/', [Car::class, 'index'])->name('index');
-    Route::get('/create', [Car::class, 'create'])->name('create');
-    Route::post('/create', [Car::class, 'store'])->name('store');
-    Route::get('/{car}', [Car::class, 'show'])->name('show');
-    Route::get('/edit/{car}', [Car::class, 'edit'])->name('edit');
-    Route::put('/edit/{car}', [Car::class, 'update'])->name('update');
-    Route::delete('/delete/{car}', [Car::class, 'destroy'])->name('delete');
+    Route::get('/', [Car::class, 'index'])->name('index')->middleware('role:admin|client');
+    Route::get('/create', [Car::class, 'create'])->name('create')->middleware('role:admin');
+    Route::post('/create', [Car::class, 'store'])->name('store')->middleware('role:admin');
+    Route::get('/{car}', [Car::class, 'show'])->name('show')->middleware('role:admin');
+    Route::get('/edit/{car}', [Car::class, 'edit'])->name('edit')->middleware('role:admin');
+    Route::put('/edit/{car}', [Car::class, 'update'])->name('update')->middleware('role:admin');
+    Route::delete('/delete/{car}', [Car::class, 'destroy'])->name('delete')->middleware('role:admin');
     });
 
 Auth::routes();
