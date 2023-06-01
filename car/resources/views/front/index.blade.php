@@ -15,7 +15,7 @@
                     <ul class="list-group">
                         @forelse($cars as $car)
                         <div class="car-line">
-                            <h3>Car: {{$car->title}}</h3>
+                            <a href="{{route('front-show-car', $car)}}"><h3>Car: {{$car->title}}</h3></a>
                             <h5>Driver`s name: {{$car->driver}}</h5>
                             <button type="submit" class="btn btn-primary">Book a car</button>
                         </div>

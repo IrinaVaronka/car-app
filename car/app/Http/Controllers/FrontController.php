@@ -26,4 +26,12 @@ class FrontController extends Controller
             'cat' => $cat
         ]);
     }
+
+    public function showCar(Car $car)
+    {
+        return view('front.car', [
+            'car' => $car, 
+            
+        ]);
+    }
 }
