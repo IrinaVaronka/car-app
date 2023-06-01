@@ -19,6 +19,7 @@ use App\Http\Controllers\FrontController as F;
 
 Route::name('front-')->group(function () {
     Route::get('/', [F::class, 'index'])->name('index');
+    Route::get('/category/{cat}', [F::class, 'catCars'])->name('cat-cars');
 });
 
 Route::prefix('cats')->name('cats-')->group(function () {

@@ -5,9 +5,12 @@
     </div>
     <div class="card-body">
         <ul class="list-group">
+        <div class="cat-line">
+                <a href="{{route('front-index')}}">All cars</a>
+            </div>
             @forelse($cats->get() as $cat)
             <div class="cat-line">
-                <a href="#">{{$cat->title}}</a>
+                <a href="{{route('front-cat-cars', $cat)}}">{{$cat->title}}</a>
             </div>
             @empty
             <li class="list-group-item">
