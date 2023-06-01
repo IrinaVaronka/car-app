@@ -1,2 +1,9 @@
 @import 'variables';
 @import 'bootstrap/scss/bootstrap';
+
+.car-line {
+    border: 3px dotted skyblue;
+    margin: 20px 0;
+    padding: 10px;
+    font-family: $p;
+}

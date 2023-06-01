@@ -7,7 +7,7 @@
         <ul class="list-group">
             @forelse($cats->get() as $cat)
             <div class="cat-line">
-                <a href="{{route('front-cat-colors', $cat)}}">{{$cat->title}}</a>
+                <a href="#">{{$cat->title}}</a>
             </div>
             @empty
             <li class="list-group-item">
