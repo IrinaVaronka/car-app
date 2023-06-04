@@ -7,7 +7,7 @@
             <div class="col-8">
                 @include('front.cats')
             </div>
-            <form action="" method="get">
+            {{-- <form action="" method="get">
                 <div class="col-8">
                     <div class="mt-3">
                         <label class="form-label">Filter</label>
@@ -21,7 +21,7 @@
                     <button type="submit" class="btn btn-primary">Submit</button>
                     <a href="" class="btn btn-danger">clear</a>
                 </div>
-            </form>
+            </form> --}}
         </div>
 
 
