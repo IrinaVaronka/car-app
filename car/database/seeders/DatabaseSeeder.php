@@ -26,30 +26,6 @@ class DatabaseSeeder extends Seeder
             'password' => Hash::make('123'),
         ]);
 
-
-        foreach([
-            'Comfort',
-            'Business',
-            'Élite'
-        ] as $title) {
-            DB::table('cats')->insert([
-                'title' => $title,
-            ]);
-        }
-
-        $faker = Faker::create('en_US');
-
-        foreach(range(1, 6) as $_) {
-            $catId = rand(1, 3);
-            DB::table('cars')->insertGetId([
-                'title' => $faker->state,
-                'driver' => $faker->lastName($gender = 'male') ,
-                'cat_id' => $catId
-            ]);
-
-            
-        }
-
     
     }
 }

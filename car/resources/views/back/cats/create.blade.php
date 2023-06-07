@@ -11,8 +11,14 @@
                         <div class="card-body">
                             <input class="form-control" type="text" name="title" placeholder="Title" value={{old('title')}}>
                         </div>
+                         <div class="card-body">
+                            <input class="form-control" type="text" name="address" placeholder="Address" value={{old('address')}}>
+                        </div>
+                        <div class="card-body">
+                            <input class="form-control" type="text" name="lead" placeholder="lead" value={{old('lead')}}>
+                        </div>
                         <div class="form-button mt-3">
-                            <button id="submit" type="submit" class="btn btn-primary">Add category</button>
+                            <button id="submit" type="submit" class="btn btn-primary">Add service</button>
                             @csrf
                         </div>
                     </form>

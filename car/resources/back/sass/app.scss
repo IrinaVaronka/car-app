@@ -8,7 +8,8 @@
     align-items: center;
     .cat-info {
         display: flex;
-        justify-content: space-around;   
+        justify-content: space-around;
+        flex-direction: column;
     }
     .buttons {
         display: flex;

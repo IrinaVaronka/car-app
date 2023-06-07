@@ -6,7 +6,7 @@
         <div class="col-8">
             <div class="card mt-5">
                 <div class="card-header">
-                    <h1>Car list</h1>
+                    <h1>Master list</h1>
                 </div>
                 <div class="card-body">
                     <ul class="list-group">
@@ -14,8 +14,11 @@
                         <li class="list-group-item">
                             <div class="cat-line">
                                 <div class="card-body">
-                                    <h3>Car: {{$car->title}}</h3>
-                                    <h4>Driver`s name: {{$car->driver}}</h4>
+                                    <h3>Master name: {{$car->name}}</h3>
+                                    <h4>Master surname: {{$car->surname}}</h4>
+                                    <h4>Master spec: {{$car->spec}}</h4>
+                                    <h4>Master city: {{$car->city}}</h4>
+                                    <h4>Master service: {{$car->cat_id}}</h4>
                                 </div>
                                 @if(Auth::user()->role < 5) <div class="buttons">
                                     <a href="{{route('cars-edit', $car)}}" class="btn btn-outline-success">Edit</a>

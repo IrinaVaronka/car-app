@@ -30,6 +30,8 @@ class CatController extends Controller
     {
         Cat::create([
             'title' => $request->title,
+            'address' => $request->address,
+            'lead' => $request->lead,
         ]);
 
         return redirect()->route('cats-index');
@@ -48,6 +50,8 @@ class CatController extends Controller
     {
         $cat->update([
             'title' => $request->title,
+            'address' => $request->address,
+            'lead' => $request->lead,
         ]);
         return redirect()->route('cats-index');
     }

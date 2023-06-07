@@ -13,8 +13,12 @@
                 </div>
                 <div class="card-body">
                     <ul class="list-group">
-                        <h5>Driver`s name: {{$car->driver}}</h5>
-                        <button type="submit" class="btn btn-primary">Book a car</button>
+                        <h5>Master`s name: {{$car->name}}</h5>
+                        <h5>Driver`s surname: {{$car->surname}}</h5>
+                        <h5>Driver`s spec: {{$car->spec}}</h5>
+                        <h5>Driver`s city: {{$car->city}}</h5>
+                        <h5>Driver`s service: {{$car->cat_id}}</h5>
+                        <button type="submit" class="btn btn-primary">Book a master</button>
                 </div>
                 </ul>
             </div>

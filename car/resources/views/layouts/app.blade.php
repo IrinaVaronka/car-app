@@ -34,14 +34,14 @@
                 
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                Categories
+                                Services
                             </a>
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('cats-index') }}">
-                                    Caterogies list
+                                    Services list
                                 </a>
                                 <a class="dropdown-item" href="{{ route('cats-create') }}">
-                                    New category
+                                    New service
                                 </a>
                             </div>
                         </li>
@@ -49,14 +49,14 @@
 
                         <li class="nav-item dropdown">
                             <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                Cars
+                                Masters
                             </a>
                             <div class="dropdown-menu dropdown-menu-end" aria-labelledby="navbarDropdown">
                                 <a class="dropdown-item" href="{{ route('cars-index') }}">
-                                    Cars list
+                                    Masters list
                                 </a>
                                 <a class="dropdown-item" href="{{ route('cars-create') }}">
-                                    New car
+                                    New master
                                 </a>
                             </div>
                         </li>

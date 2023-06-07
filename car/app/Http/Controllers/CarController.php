@@ -33,8 +33,10 @@ class CarController extends Controller
     public function store(Request $request)
     {
         Car::create([
-            'title' => $request->title,
-            'driver' => $request->driver,
+            'name' => $request->name,
+            'surname' => $request->surname,
+            'spec' => $request->spec,
+            'city' => $request->city,
             'cat_id' => $request->cat_id
            
         ]);

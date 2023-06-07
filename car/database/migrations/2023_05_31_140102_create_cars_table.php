@@ -13,8 +13,10 @@ return new class extends Migration
     {
         Schema::create('cars', function (Blueprint $table) {
             $table->id();
-            $table->string('title', 100);
-            $table->string('driver', 100)->nullable();
+            $table->string('name', 100);
+            $table->string('surname', 100);
+            $table->string('spec', 100);
+            $table->string('city', 100);
             $table->unsignedBigInteger('cat_id');
             $table->foreign('cat_id')->references('id')->on('cats');
             $table->timestamps();
